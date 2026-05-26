@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nexus Scheduler One-Pager</title><style>
+body{margin:0;background:#0b1020;color:#e5eefb;font-family:Inter,Arial,sans-serif}
+.page{width:8.5in;height:11in;box-sizing:border-box;padding:0.65in 0.7in;background:linear-gradient(180deg,#0b1020 0%,#0f172a 100%);position:relative;overflow:hidden}
+.h1{font-size:30px;font-weight:800;letter-spacing:-.02em;margin:0;color:#fff}
+.sub{margin-top:6px;color:#8ea0c0;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.section{margin-top:18px}
+.h2{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:#7dd3fc;margin:0 0 8px}
+.p{font-size:11px;line-height:1.55;color:#d6e2f2;margin:0}
+ul{margin:8px 0 0 18px;padding:0;color:#d6e2f2;font-size:11px;line-height:1.45}
+li{margin-bottom:4px}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:14px}
+.badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.badge{font-size:10px;padding:5px 9px;border-radius:999px;background:rgba(125,211,252,.09);border:1px solid rgba(125,211,252,.18);color:#c8efff}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.price .tier{padding:10px 11px;border-radius:12px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.035)}
+.price .tier strong{display:block;font-size:15px;color:#fff;margin-bottom:2px}
+.gold{border:1px solid rgba(245,158,11,.38);background:linear-gradient(135deg,rgba(245,158,11,.11),rgba(249,115,22,.08))}
+.gold strong{color:#fbbf24}
+.footer{position:absolute;left:0.7in;right:0.7in;bottom:0.45in;font-size:9.5px;color:#84a0c6;display:flex;justify-content:space-between;gap:10px;border-top:1px solid rgba(255,255,255,.08);padding-top:8px}
+.small{font-size:9.5px;color:#9fb1cf}
+.stat{font-size:18px;font-weight:900;color:#7dd3fc}
+.stat2{font-size:18px;font-weight:900;color:#fbbf24}
+.kpi{display:flex;gap:10px;margin-top:10px}
+.kpi .box{flex:1;padding:10px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
+.kpi .label{font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:#9fb1cf}
+.kpi .value{font-size:16px;font-weight:900;margin-top:4px}
+</style></head><body><div class="page">
+<div class="h1">Nexus Scheduler</div>
+<div class="sub">Hardware-inspired agent orchestration for enterprise AI systems</div>
+<div class="badges"><span class="badge">64 hierarchical queues</span><span class="badge">Priority aging</span><span class="badge">TD-error credit assignment</span><span class="badge">1M+ agents</span><span class="badge">CPU/GPU/LPU affinity</span><span class="badge">Commercial source delivery</span></div>
+
+<div class="grid section">
+  <div>
+    <div class="card">
+      <div class="h2">Problem</div>
+      <p class="p">Most agent stacks become fragile at scale. They struggle with queue contention, poor scheduling fairness, weak throughput, and no clean mechanism for temporal credit assignment. That makes them hard to use for production AI infrastructure, robotics, simulation, and RL systems.</p>
+    </div>
+
+    <div class="card section">
+      <div class="h2">Solution</div>
+      <ul>
+        <li>64 hierarchical queues with round-robin scheduling.</li>
+        <li>Priority aging to prevent starvation under load.</li>
+        <li>Per-agent ring buffers for TD-error credit assignment.</li>
+        <li>1M+ agent context support, in-memory or Redis-backed.</li>
+        <li>CPU / GPU / LPU / ANY affinity routing.</li>
+        <li>Signed license delivery and source-code packaging.</li>
+      </ul>
+    </div>
+
+    <div class="card section">
+      <div class="h2">Benchmark summary</div>
+      <div class="kpi">
+        <div class="box"><div class="label">Creation phase</div><div class="value">50,000 agents in 17.526s</div><div class="small">2,853 agents/sec</div></div>
+        <div class="box"><div class="label">Scheduling phase</div><div class="value">250,000 steps in 0.115s</div><div class="small">2,166,522 steps/sec</div></div>
+      </div>
+      <p class="p" style="margin-top:10px;"><strong>Nexus Scheduler processes 2.16M scheduling steps/second on a single Windows CPU node</strong> (50,000 agents, 250,000 steps, 0.115s total scheduling time) — versus Ray RLlib’s ~1.2ms dispatch latency per step.</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <div class="h2">Commercial options</div>
+      <div class="price">
+        <div class="tier"><strong>$50K</strong><div class="small">Startup license</div><div class="small">90 days</div></div>
+        <div class="tier"><strong>$250K</strong><div class="small">Enterprise license</div><div class="small">1 year</div></div>
+        <div class="tier"><strong>0.5%</strong><div class="small">Royalty / OEM</div><div class="small">Ongoing</div></div>
+        <div class="tier gold"><strong>$5M</strong><div class="small">Full IP transfer</div><div class="small">Exclusive ownership</div></div>
+      </div>
+    </div>
+
+    <div class="card section">
+      <div class="h2">Full IP transfer includes</div>
+      <ul>
+        <li>All source code.</li>
+        <li>Patent rights assignment.</li>
+        <li>Architecture and integration docs.</li>
+        <li>Benchmark materials.</li>
+        <li>No royalties or ongoing license fees.</li>
+      </ul>
+    </div>
+
+    <div class="card section">
+      <div class="h2">Why buy now</div>
+      <p class="p">This is not just a software license. It is a strategic control layer for agentic AI infrastructure. The full IP transfer gives the buyer exclusive ownership of the technology, suitable for acquisition-level buyers, strategic platforms, and IP investors.</p>
+    </div>
+  </div>
+</div>
+</div></body></html>
